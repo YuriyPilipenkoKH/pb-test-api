@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",  // Use ES6/ESNext modules
+    "target": "ESNext",  // Use the latest JavaScript features
+    "outDir": "dist",  // Output the compiled files to the 'dist' directory
+    "rootDir": "src",  // Source files are in the 'src' directory
+    "strict": true,  // Enable strict type-checking options
+    "esModuleInterop": true,  // Allow default imports from modules without default exports
+    "skipLibCheck": true,  // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true  // Ensure that file names are case-sensitive
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
