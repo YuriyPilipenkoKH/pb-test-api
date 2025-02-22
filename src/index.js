@@ -1,9 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import authRoutes from './routes/auth.route.js'
 import { corsOptions } from "./lib/cors.js";
 import connectDB from "./lib/mongo.js";
+import authRoutes from './routes/auth.route.js'
+import contactsRoutes from './routes/contact.route.js'
 
 
 // Load environment variables
@@ -23,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
-// app.use('/api/contacts', contactsRoutes);
+app.use('/api/contacts', contactsRoutes);
 
 // Start the server
 app.listen(PORT, () => {

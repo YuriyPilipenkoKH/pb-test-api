@@ -3,6 +3,7 @@ import { delContact } from "../controllers/contact/delContact.js";
 import { editContact } from "../controllers/contact/editContact.js";
 import { newContact } from "../controllers/contact/newContact.js";
 import { authenticate } from "../middleware/authenticate.js";
+import { grabContacts } from '../controllers/contact/grabContacts.js';
 
 
 const router = express.Router();
