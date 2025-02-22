@@ -1,7 +1,7 @@
 import { compareSync } from "bcryptjs";
 import { User } from "../../models/user.model.js";
 import capitalize from "../../lib/capitalize.js";
-
+import jwt from "jsonwebtoken"
 
 
 export const login = async (req, res) => {
