@@ -2,26 +2,31 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import authRoutes from './routes/auth.route.js'
+import { corsOptions } from "./lib/cors.js";
+import connectDB from "./lib/mongo.js";
+
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5500;
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Sample route
 app.get("/", (req, res) => {
-  res.send("Hello World from Express API with TypeScript!");
+  res.send("Hello World from Express API");
 });
 
 app.use('/api/auth', authRoutes);
+// app.use('/api/contacts', contactsRoutes);
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+app.listen(PORT, () => {
+  console.log(`Listening to port ${PORT}`)
+  connectDB()
+} );
