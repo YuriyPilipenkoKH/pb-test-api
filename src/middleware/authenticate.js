@@ -17,9 +17,10 @@ export const authenticate = async (req, res, next) => {
     if(!user )  {
         next(HttpError(401, "Unauthorized - user not found"));
     }
-
+    req.user = user 
+    next()
     
   } catch (error) {
-    
+    next(HttpError(401, "Invalid token"));
   }
 }
