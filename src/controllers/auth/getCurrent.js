@@ -2,7 +2,6 @@
 export const getCurrent = async (req, res) => {
   try {
     const user = req.user
-
     const { password: _, ...plainUser } = user.toObject()
 
     res.status(200).json({

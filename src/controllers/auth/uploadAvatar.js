@@ -4,7 +4,7 @@ import { User } from "../../models/user.model.js";
 
 
 export const uploadAvatar = async (req, res) => {
-  const {_id: userId} = req.user
+  const userId = req.user._id
   if (!userId) {
     res.status(400).json({ message: 'User ID not found' });
   }
