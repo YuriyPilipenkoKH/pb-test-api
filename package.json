@@ -20,7 +20,7 @@
   "homepage": "https://github.com/YuriyPilipenkoKH/test-api#readme",
   "description": "",
   "dependencies": {
-    "bcrypt-ts": "^5.0.3",
+    "bcryptjs": "^3.0.2",
     "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
