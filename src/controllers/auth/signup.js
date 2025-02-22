@@ -1,6 +1,6 @@
 import { genSaltSync, hashSync } from "bcryptjs";
-import { User } from "../../models/user.model";
-import capitalize from "../../lib/capitalize";
+import { User } from "../../models/user.model.js";
+import capitalize from "../../lib/capitalize.js";
 
 
 export const signup = async (req, res) => {

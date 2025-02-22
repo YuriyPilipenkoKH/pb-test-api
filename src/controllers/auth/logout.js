@@ -1,4 +1,4 @@
-import capitalize from "../../lib/capitalize";
+import capitalize from "../../lib/capitalize.js";
 
 
 export const logout = async (req, res) => {
