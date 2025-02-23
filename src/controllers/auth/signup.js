@@ -16,8 +16,7 @@ export const signup = async (req, res) => {
       });
       return;
     }
-    const salt = genSaltSync(10);
-    const hashedPassword = hashSync(password, salt);
+    const hashedPassword = hashSync(password, genSaltSync(10));
 
     const newUser = await User.create({ 
       ...req.body,
